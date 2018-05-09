@@ -1,0 +1,239 @@
+%http://serverfault.com/questions/306345/certification-authority-root-certificate-expiry-and-renewal
+\documentclass[14pt, article, twoside, a4paper]{memoir}
+
+% Files encoding
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-noquoting, es-tabla]{babel}
+%es-noquoting era por el tikz
+
+\usepackage[spanish]{translator}
+\usepackage[OT1]{fontenc}
+%\usepackage[T1]{fontenc}
+
+\usepackage{a4wide}
+%\setlength{\parskip}{6pt plus4mm minus3mm}
+\abnormalparskip{6pt} % este es el que hay que usar en memoir 12
+%\traditionalparskip
+
+%Figuras
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[inline]{enumitem}
+
+\usepackage{adjustbox}
+
+\usepackage[colorinlistoftodos]{todonotes} % displayed only in draft mode 
+\newcommand{\mynote}[1]{\todo[inline, size=\small]{\ttfamily#1}}
+
+\usepackage{textcomp} % <--- for other glyphs
+
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+\setlength\parindent{0pt}
+
+\usepackage{bold-extra} % For bold small capitals
+\usepackage{titlesec}
+
+\titleformat{\part}[frame]
+{\Huge\bfseries}
+{\filcenter\huge\ PARTE \thepart \ }
+{20pt}
+{\filcenter}
+
+\titleformat{\chapter}[display]
+{\LARGE\scshape\bfseries}
+{\filleft\huge\thechapter}
+{20pt}
+{\filleft}
+[\vfill\cleardoublepage]
+%
+\titlespacing{\chapter}{0pt}{5.5cm}{0pt}
+\renewcommand{\thechapter}{\thepart.\arabic{chapter}}
+% Reset chapter and section counter with \part
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother  
+
+\titleformat{\section}[display]
+{\vspace*{5.5cm}\Large\scshape\bfseries}
+{\filleft\LARGE\thesection}
+{0pt}
+{\filleft}
+[\vfill\cleardoublepage]
+%
+\titlespacing{\section}{0pt}{5.5cm}{0pt}
+\renewcommand{\thesection}{\thechapter.\Alph{section}}
+
+\titleformat{\subsection}[display]
+{\large\scshape\bfseries}
+{\filleft\Large\thesubsection}
+{0pt}
+{\filleft}
+[\vfill\cleardoublepage]
+%
+\titlespacing{\subsection}{0pt}{5.5cm}{0pt}
+\renewcommand{\thesubsection}{\thesection.\roman{subsection}}
+
+\newcounter{exercise}
+\setcounter{exercise}{0}
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\maxsecnumdepth{paragraph}%
+\setsecnumdepth{paragraph}%
+
+%\counterwithout{section}{chapter}
+
+
+\vspace*{\stretch{1}}
+{\Huge\bfseries
+\rule{\linewidth}{1mm}
+\begin{center}
+\medskip
+DOCUMENTACIÓN JUSTIFICATIVA \\
+DE LOS \\
+MÉRITOS ALEGADOS \\
+EN EL \\
+CURRÍCULUM VÍTAE\\
+\end{center}
+\rule{\linewidth}{1mm}
+}
+\vspace*{\stretch{1}}
+\begin{flushright}
+\Large
+Name Surname\\
+NIF: 12345678Z\\
+\medskip
+DD de MM de YYYY\\
+\end{flushright}
+
+\cleardoublepage
+\vspace*{4cm}
+\begin{center} 
+\includegraphics{id}
+\end{center}
+\cleardoublepage 
+
+\part{Experiencia investigadora}
+
+\chapter{Publicaciones científicas}
+\cleardoublepage 
+
+\section{Artículos en revistas}
+\cleardoublepage 
+\input{../04_EI_Revistas/00_EI_Revistas}
+
+\section{Libros y capítulos de libros}
+\cleardoublepage 
+\input{../05_EI_Libros/00_EI_Libros}
+
+\cleardoublepage
+\chapter{Participación en proyectos de investigación y/o en contratos de I+D}
+\cleardoublepage 
+\input{../06_EI_Participacion_proyectos/00_EI_Proyectos}
+
+\cleardoublepage
+\chapter{Patentes y otros resultados de la investigación, especialmente los que produzcan transferencia tecnológica al sector productivo}
+\cleardoublepage
+\input{../07_EI_Patentes/00_EI_Patentes}
+
+\cleardoublepage
+\chapter{Tesis doctorales dirigidas}
+
+\cleardoublepage
+\chapter{Obras artísticas}
+
+\cleardoublepage
+\chapter{Contribuciones a congresos y conferencias científicas}
+\cleardoublepage 
+\input{../10_EI_Papers_y_congresos/00_EI_Papers_y_congresos}
+
+\cleardoublepage
+\chapter{Otros méritos relevantes de investigación}
+\cleardoublepage 
+\input{../15_EI_Otros_meritos_de_investigacion/00_EI_Otros_meritos_de_investigacion}
+
+
+\part{Experiencia docente}
+
+\cleardoublepage
+\chapter{Puestos ocupados y docencia impartida}
+\cleardoublepage 
+\input{../30_ED_Docencia_Impartida/00_ED_Docencia_Impartida}
+
+\cleardoublepage
+\chapter{Cursos y seminarios impartidos orientados a la formación didactica universitaria}
+\cleardoublepage 
+\input{../35_ED_Cursos_impartidos/00_ED_Cursos_impartidos}
+
+\cleardoublepage
+\chapter{Cursos y seminarios recibidos y participación en congresos orientados a la formación didáctica universitaria}
+\cleardoublepage 
+\input{../37_ED_Cursos_recibidos/00_ED_Cursos_recibidos}
+
+\cleardoublepage
+\chapter{Elaboración del material docente y metodológico}
+\cleardoublepage 
+
+\cleardoublepage
+\chapter{Participación en proyectos de innovación docente}
+\cleardoublepage 
+
+\cleardoublepage
+\chapter{Otros méritos docentes relevantes}
+\cleardoublepage 
+\input{../49_ED_Otros_meritos_docentes/00_ED_Otros_meritos_docentes}
+
+
+\part{Formación académica}
+
+\cleardoublepage 
+\chapter{Titulación universitaria}
+\cleardoublepage 
+\input{../50_FA_Titulo_Universitario/00_FA_Titulo_Universitario}
+
+\cleardoublepage 
+\chapter{Doctorado}
+\cleardoublepage 
+\input{../51_FA_Doctorado/00_FA_Doctorado}
+
+\cleardoublepage 
+\chapter{Otros títulos de postgrado}
+\cleardoublepage 
+\input{../53_FA_Postgrado_u_otros/00_FA_Postgrado_u_otros}
+
+\cleardoublepage 
+\chapter{Ayudas y becas}
+\cleardoublepage 
+
+\cleardoublepage 
+\chapter{Estancias en centros españoles y extranjeros}
+\cleardoublepage 
+\input{../55_FA_Estancia/00_FA_Estancia}
+
+\cleardoublepage 
+\chapter{Cursos y seminarios de especialización}
+\cleardoublepage 
+\input{../60_FA_Cursos_especializacion/00_FA_Cursos_especializacion}
+
+\part{Experiencia profesional}
+\cleardoublepage 
+
+\cleardoublepage 
+\chapter{Actividades de carácter profesional}
+\cleardoublepage 
+\input{../70_EL_Actividades_Profesionales/00_EL_Actividades_Profesionales}
+
+\cleardoublepage 
+\chapter{Otras actividades profesionales}
+\cleardoublepage 
+\input{../75_EL_Otras/00_EL_Otras}
+
+\part{Otros méritos}
+\cleardoublepage 
+\input{../80_Otros_meritos_relevantes/00_Otros_meritos_relevantes}
+
+\end{document}

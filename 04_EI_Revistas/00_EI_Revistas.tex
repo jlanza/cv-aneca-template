@@ -1,0 +1,17 @@
+%!TEX root = ../00_Documentacion_Completa/Acreditacion.tex
+
+\newcommand{\revista}[4]{
+\cleardoublepage
+\vspace*{10cm}
+\textsc{Artículo}:\\[5pt]
+\uppercase{\textbf{#1}}\\
+\bigskip
+
+\textsc{Revista}: \uppercase{\textbf{#2}}\\
+
+\textsc{Año de publicación}: \uppercase{\textbf{#3}}\\
+\cleardoublepage
+\includepdf[pages=-]{../04_EI_Revistas/#4}
+}
+
+\revista{Title}{Journal}{2018}{journal}%{1,2,3,4}

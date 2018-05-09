@@ -1,0 +1,20 @@
+%!TEX root = ../00_Documentacion_Completa/Acreditacion.tex
+
+\newcommand{\congreso}[4]{
+\cleardoublepage
+\vspace*{10cm}
+\textsc{Artículo}:\\[5pt]
+\uppercase{\textbf{#1}}\\
+\bigskip
+
+\textsc{Congreso/Conferencia}:\\[5pt]
+\uppercase{\textbf{#2}}\\
+
+\textsc{Año de publicación}: \uppercase{\textbf{#3}}\\
+
+\cleardoublepage
+
+\includepdf[pages=-]{../10_EI_Papers_y_congresos/#4}
+}
+
+\congreso{Title}{Conference}{2018}{conference}

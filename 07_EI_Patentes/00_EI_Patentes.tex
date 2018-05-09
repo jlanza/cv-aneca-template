@@ -1,0 +1,17 @@
+%!TEX root = ../00_Documentacion_Completa/Acreditacion.tex
+
+\newcommand{\patente}[2]{
+\cleardoublepage
+\vspace*{10cm}
+Título: 
+\\[5pt]
+\uppercase{\textbf{#1}}\\
+\bigskip
+
+\cleardoublepage
+ 
+\includepdf[pages=-]{../07_EI_Patentes/#2}
+}
+
+\patente{Patent Title}{patent}
+

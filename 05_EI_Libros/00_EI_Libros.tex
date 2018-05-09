@@ -1,0 +1,15 @@
+%!TEX root = ../00_Documentacion_Completa/Acreditacion.tex
+
+\newcommand{\libro}[4]{
+\vspace*{10cm}
+\textsc{Libro}: \uppercase{\textbf{#1}}\\
+\bigskip
+
+\textsc{Capítulo}: \uppercase{\textbf{#2}}\\
+
+\textsc{Año de publicación}: \uppercase{\textbf{#3}}\\
+\cleardoublepage
+\includepdf[pages=-]{../05_EI_Libros/#4}
+}
+
+\libro{Title}{Chapter}{2018}{book}

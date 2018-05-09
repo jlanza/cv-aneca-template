@@ -1,0 +1,20 @@
+%!TEX root = ../00_Documentacion_Completa/Acreditacion.tex
+
+\newcommand{\estancia}[2]{
+\cleardoublepage 
+\vspace*{10cm}
+\textsc{Universidad/Organismo}:\\
+\uppercase{\textbf{#1}}\\[5pt]
+\bigskip
+\textsc{Pais}:\\
+\uppercase{\textbf{#2}}\\
+\cleardoublepage
+}
+
+\estancia{University/Company}{Country}
+% Include as many documents as required to justify
+\includepdf[pages=-]{../55_FA_Estancia/stay_certificate}
+\cleardoublepage
+\includepdf[pages=-]{../55_FA_Estancia/stay_certificate}
+
+
